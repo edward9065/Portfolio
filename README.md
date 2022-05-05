@@ -11,8 +11,27 @@ Running the executable followed by two arguments, the IP address and port given 
 
 Both programs use poll in an infinite loop to pick either the connected socket or standard in to read from. If it reads from the connected socket, it writes to the standard out. If it reads from standard in, it writes to the socket.
 
-Included is a demo tested on UVA's CS department servers. I compile it to show that it compiles and run it here: </p>
+Included is a demo tested on UVA's CS department servers. I compile and run it here: </p>
+
+
+
+https://user-images.githubusercontent.com/96403210/166975620-9b7d8065-05d0-4232-ac7c-0be17e10b40a.mp4
+
+
 
 
 <h3> RPN Calculator </h3>
-Only works in linux because windows does not have the required header files.
+<p>
+May not work in windows due to missing header files.
+
+Reverse polish notation calculator that takes input from standard in, parses it, and calculates the result. The program can recognize any signed 32-bit integer and these four operators: "+", "-", "*", "/". The calculator prints out the intermediate stacks as as it runs. 
+  
+The program terminates when it encounters an unrecognized token, reaches the end of input, or does not have enough operands to perform an operation. The program can handle extremely long lines as well as multiple short lines. 
+
+Below is a demo of the calculator which was compiled and run on UVA's CS department servers:
+</p>  
+https://user-images.githubusercontent.com/96403210/166977503-6dd2ff03-2876-43b6-87db-f893b2c48151.mp4
+
+<p>
+Suggested test cases: large integers, many integers and operations, and multiple whitespaces between tokens. End of input can be done by pressing Cntl+D. In addition, the command "echo -n 12 2 3 * 2 + | ./rpn" can be used to test the calculator's function if the input is ended without a newline character.
+ </p>
